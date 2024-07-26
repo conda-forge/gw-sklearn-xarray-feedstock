@@ -1,5 +1,5 @@
 {% set name = "gw-sklearn-xarray" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/v{{ version }}_gw.tar.gz  
-  sha256: cad1c9e62e2700f0ae6299bafcae16aa3716063f784990118d10d97751ebb505
+  sha256: a072493eb16327eb54830ba8ef6a524e75bad3c1c1b9399e47832912b198566f
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - python >=3.7
     - numpy
     - scipy
-    - scikit-learn =1.2.0
+    - scikit-learn
     - pandas
     - xarray
 
@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - mmann1123
     - jgrss
+
