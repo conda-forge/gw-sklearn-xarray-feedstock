@@ -10,7 +10,7 @@ def get_sha256_hash(url):
     return sha256_hash
 
 
-url = "https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/0.5.1.tar.gz"
+url = "https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/0.5.1_gw.tar.gz"
 hash_value = get_sha256_hash(url)
 print(f"SHA-256 hash: {hash_value}")
 
