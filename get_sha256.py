@@ -28,9 +28,28 @@ def get_sha256_hash(url):
 
 # read in meta.yaml file and retrieve source URL and version
 
-
-# url = "https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/0.5.1_gw.tar.gz"
+# %%
+version = "v0.5.2"
+url = f"https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/{version}.tar.gz"
 hash_value = get_sha256_hash(url)
 print(f"SHA-256 hash: {hash_value}")
+
+# %%
+import hashlib
+
+
+def get_sha256(file_path):
+    sha256_hash = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        # Read the file in chunks to handle large files efficiently
+        for byte_block in iter(lambda: f.read(4096), b""):
+            sha256_hash.update(byte_block)
+    return sha256_hash.hexdigest()
+
+
+# Example usage
+file_path = "/home/mmann1123/Downloads/sklearn-xarray-0.5.2.tar.gz"
+checksum = get_sha256(file_path)
+print(f"SHA256 checksum: {checksum}")
 
 # %%

@@ -1,13 +1,12 @@
 {% set name = "gw-sklearn-xarray" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
-source:
-  url: https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/{{ version }}.tar.gz  
-  sha256: a072493eb16327eb54830ba8ef6a524e75bad3c1c1b9399e47832912b198566f
+  url: https://github.com/mmann1123/sklearn-xarray/archive/refs/tags/v{{ version }}.tar.gz  
+  sha256: 00c01f769d3bb4c74e90da9c5edd2fcf7c3f0c6d0ecbccc73b293231760fa5e0
 
 build:
   noarch: python
